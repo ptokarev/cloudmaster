@@ -1,9 +1,174 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" version="24.8.4">
   <diagram name="Page-1" id="gnpGI-q8RVE4ve7eIPJm">
-    <mxGraphModel>
+    <mxGraphModel dx="1039" dy="397" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Ek18hozwMuarBM_FEDP9-1" value="3. Cost Processing" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="930" width="468" height="291" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-2" value="1. Data Collection" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="282" y="145" width="516" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-3" value="Kubernetes API" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="21" width="167" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-4" value="UI Dashboard" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="165" y="1419" width="154" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-5" value="Agent Cache&#xa;    (Local Storage)" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.04;" vertex="1" parent="1">
+          <mxGeometry x="229" y="509" width="139" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-6" value="Metrics and &#xa;    Metadata Store" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.04;" vertex="1" parent="1">
+          <mxGeometry x="172" y="789" width="142" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-7" value="Daily Metrics&#xa;    Store" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.04;" vertex="1" parent="1">
+          <mxGeometry x="657" y="20" width="123" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-8" value="Cost/Billing&#xa;    Database" style="strokeWidth=2;shape=process;whiteSpace=wrap;size=0.04;" vertex="1" parent="1">
+          <mxGeometry x="185" y="1295" width="115" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-9" value="1.1&#xa;        Collect Metrics&#xa;        (30s interval)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="332" y="170" width="168" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-10" value="1.2&#xa;        Collect Config&#xa;        (300s interval)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="599" y="170" width="164" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-11" value="2.&#xa;    Generate 10-min&#xa;    Aggregates" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="208" y="634" width="181" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-12" value="3.1&#xa;        Current Cost&#xa;        Calculator" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="55" y="1113" width="151" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-13" value="3.2&#xa;        Daily Cost&#xa;        Aggregator" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="285" y="955" width="140" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-14" value="3.3&#xa;        Cost Reconciliation" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="256" y="1121" width="197" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-15" value="E.&#xa;    Error Handler &amp;&#xa;    Recovery" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="527" y="773" width="209" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-16" value="V.&#xa;    Data Quality&#xa;    Validator" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="286" y="352" width="150" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-17" value="Raw metrics" style="curved=1;startArrow=none;endArrow=block;exitX=0.25;exitY=1.01;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-3" target="Ek18hozwMuarBM_FEDP9-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="416" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-18" value="Config data" style="curved=1;startArrow=none;endArrow=block;exitX=0.87;exitY=1.01;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-3" target="Ek18hozwMuarBM_FEDP9-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="681" y="108" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-19" value="Metrics" style="curved=1;startArrow=none;endArrow=block;exitX=0.29;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-9" target="Ek18hozwMuarBM_FEDP9-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="361" y="279" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-20" value="Config" style="curved=1;startArrow=none;endArrow=block;exitX=0.17;exitY=1;entryX=1;entryY=0.2;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-10" target="Ek18hozwMuarBM_FEDP9-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="595" y="279" />
+              <mxPoint x="595" y="315" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-21" value="Validated data" style="curved=1;startArrow=none;endArrow=block;exitX=0.28;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-16" target="Ek18hozwMuarBM_FEDP9-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="298" y="472" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-22" value="Raw data" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-5" target="Ek18hozwMuarBM_FEDP9-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-23" value="10-min aggregates" style="curved=1;startArrow=none;endArrow=block;exitX=0.35;exitY=0.99;entryX=0.5;entryY=0.01;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-11" target="Ek18hozwMuarBM_FEDP9-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="243" y="737" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-24" value="Current metrics" style="curved=1;startArrow=none;endArrow=block;exitX=0.24;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-6" target="Ek18hozwMuarBM_FEDP9-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="131" y="894" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-25" value="Daily data" style="curved=1;startArrow=none;endArrow=block;exitX=0.76;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-6" target="Ek18hozwMuarBM_FEDP9-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="355" y="894" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-26" value="Current cost" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.1;entryY=0;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-12" target="Ek18hozwMuarBM_FEDP9-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="131" y="1258" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-27" value="Daily cost" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1.01;entryX=0.5;entryY=0.01;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-13" target="Ek18hozwMuarBM_FEDP9-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-28" value="Reconciled cost" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.9;entryY=0;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-14" target="Ek18hozwMuarBM_FEDP9-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="355" y="1258" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-29" value="Errors" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=1;exitY=0.99;entryX=0.29;entryY=0;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-9" target="Ek18hozwMuarBM_FEDP9-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="551" y="279" />
+              <mxPoint x="551" y="737" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-30" value="Errors" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.68;exitY=1;entryX=0.75;entryY=0;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-10" target="Ek18hozwMuarBM_FEDP9-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="729" y="279" />
+              <mxPoint x="729" y="737" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-31" value="Errors" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.74;exitY=0.99;entryX=0;entryY=0.1;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-11" target="Ek18hozwMuarBM_FEDP9-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="389" y="737" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-32" value="Retry" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.1;exitY=0;entryX=0.9;entryY=1;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-15" target="Ek18hozwMuarBM_FEDP9-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="474" y="737" />
+              <mxPoint x="474" y="472" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ek18hozwMuarBM_FEDP9-33" value="Cost data" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=0.01;rounded=0;" edge="1" parent="1" source="Ek18hozwMuarBM_FEDP9-8" target="Ek18hozwMuarBM_FEDP9-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
