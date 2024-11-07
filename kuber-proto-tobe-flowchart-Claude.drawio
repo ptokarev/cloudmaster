@@ -1,9 +1,305 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" version="24.8.4">
   <diagram name="Page-1" id="n3NCKiiEM9x_XAx0-x6J">
-    <mxGraphModel>
+    <mxGraphModel dx="1094" dy="418" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-1" value="Reconciliation Layer" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1477" width="384" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-2" value="Cost Calculation Layer" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="424" y="1096" width="491" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-3" value="Data Aggregation" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="934" y="683" width="315" height="511" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-4" value="Local Storage Layer" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1269" y="476" width="350" height="327" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-5" value="Data Collection Layer" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1639" y="104" width="577" height="506" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-6" value="Start Metrics Collection" style="rounded=1;whiteSpace=wrap;arcSize=50;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1759" y="20" width="192" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-7" value="Start Config Collection" style="rounded=1;whiteSpace=wrap;arcSize=50;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="2001" y="20" width="186" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-8" value="Get cAdvisor Metrics&#xa;        (30s interval)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1751" y="129" width="208" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-9" value="Get K8s Config&#xa;        (300s interval)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="2012" y="129" width="165" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-10" value="Validate&#xa;        Metrics Data" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1686" y="246" width="158" height="158" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-11" value="Validate&#xa;        Config Data" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1922" y="249" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-12" value="Retry Logic&#xa;        Max 3 attempts&#xa;        Exp. backoff" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1777" y="501" width="172" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-13" value="Retry Logic&#xa;        Max 3 attempts&#xa;        Exp. backoff" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="2008" y="501" width="172" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-14" value="Agent Cache&#xa;        - 24h retention&#xa;        - 1GB max size&#xa;        - LRU eviction" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1424" y="509" width="106" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-15" value="Backup Cache&#xa;        - Async replication&#xa;        - 48h retention" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1433" y="708" width="115" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-16" value="Create 10-min aggregates&#xa;        - Resource usage&#xa;        - Cost metrics" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="969" y="719" width="245" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-17" value="Validate&#xa;        Aggregates" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1018" y="876" width="147" height="147" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-18" value="Audit Log&#xa;        - Aggregation timestamp&#xa;        - Source data range&#xa;        - Validation status" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1056" y="1121" width="129" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-19" value="Current Cost Calc&#xa;        - Real-time pricing&#xa;        - Resource allocation" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="459" y="1121" width="186" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-20" value="Daily Aggregation&#xa;        - 24h rollup&#xa;        - Cost attribution" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="694" y="1121" width="185" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-21" value="Validate&#xa;        Cost Data" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="647" y="1268" width="136" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-22" value="Audit Log&#xa;        - Calculation method&#xa;        - Price sources&#xa;        - Validation results" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="734" y="1502" width="129" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-23" value="Daily Reconciliation&#xa;        - Compare with billing&#xa;        - Resolve discrepancies" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="142" y="1502" width="202" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-24" value="Monthly Reconciliation&#xa;        - Final cost adjustment&#xa;        - Invoice preparation" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="55" y="1626" width="224" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-25" value="Audit Log&#xa;        - Reconciliation details&#xa;        - Adjustment records&#xa;        - Approval status" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="175" y="1736" width="129" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-26" value="Billing Database&#xa;    - 7 years retention&#xa;    - Immutable records&#xa;    - Point-in-time recovery" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="439" y="1725" width="130" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-27" value="UI Dashboard" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="426" y="1872" width="154" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-28" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-6" target="XEi4X-qLvamTxuiHMfgi-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-29" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-7" target="XEi4X-qLvamTxuiHMfgi-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-30" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.25;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-8" target="XEi4X-qLvamTxuiHMfgi-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1765" y="221" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-31" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.16;exitY=0.99;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-9" target="XEi4X-qLvamTxuiHMfgi-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1997" y="221" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-32" value="Valid" style="curved=1;startArrow=none;endArrow=block;exitX=0.34;exitY=0.99;entryX=1;entryY=0.3;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-10" target="XEi4X-qLvamTxuiHMfgi-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1728" y="440" />
+              <mxPoint x="1728" y="476" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-33" value="Valid" style="curved=1;startArrow=none;endArrow=block;exitX=0.35;exitY=1;entryX=1;entryY=0.4;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-11" target="XEi4X-qLvamTxuiHMfgi-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1962" y="440" />
+              <mxPoint x="1962" y="476" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-34" value="Invalid" style="curved=1;startArrow=none;endArrow=block;exitX=0.68;exitY=0.99;entryX=0.29;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-10" target="XEi4X-qLvamTxuiHMfgi-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1806" y="440" />
+              <mxPoint x="1806" y="476" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-35" value="Invalid" style="curved=1;startArrow=none;endArrow=block;exitX=0.64;exitY=1;entryX=0.27;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-11" target="XEi4X-qLvamTxuiHMfgi-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2030" y="440" />
+              <mxPoint x="2030" y="476" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-36" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.59;exitY=0;entryX=0.59;entryY=0.99;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-12" target="XEi4X-qLvamTxuiHMfgi-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1887" y="476" />
+              <mxPoint x="1887" y="221" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-37" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.69;exitY=0;entryX=0.67;entryY=0.99;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-13" target="XEi4X-qLvamTxuiHMfgi-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2145" y="476" />
+              <mxPoint x="2145" y="221" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-38" value="Async Backup" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0;exitY=0.91;entryX=0;entryY=0.16;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-14" target="XEi4X-qLvamTxuiHMfgi-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1348" y="610" />
+              <mxPoint x="1348" y="683" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-39" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.22;exitY=1.01;entryX=1;entryY=0.04;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-14" target="XEi4X-qLvamTxuiHMfgi-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1419" y="610" />
+              <mxPoint x="1419" y="683" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-40" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.39;exitY=1;entryX=0.19;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-16" target="XEi4X-qLvamTxuiHMfgi-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1023" y="803" />
+              <mxPoint x="1023" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-41" value="Valid" style="curved=1;startArrow=none;endArrow=block;exitX=0.23;exitY=1;entryX=1;entryY=0.3;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-17" target="XEi4X-qLvamTxuiHMfgi-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1033" y="1059" />
+              <mxPoint x="1033" y="1096" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-42" value="Invalid" style="curved=1;startArrow=none;endArrow=block;exitX=0.75;exitY=0;entryX=0.59;entryY=1;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-17" target="XEi4X-qLvamTxuiHMfgi-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1147" y="840" />
+              <mxPoint x="1147" y="803" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-43" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.63;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-17" target="XEi4X-qLvamTxuiHMfgi-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1121" y="1059" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-44" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.35;exitY=1;entryX=0;entryY=0.26;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-19" target="XEi4X-qLvamTxuiHMfgi-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="498" y="1195" />
+              <mxPoint x="498" y="1231" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-45" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.84;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-20" target="XEi4X-qLvamTxuiHMfgi-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="787" y="1231" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-46" value="Valid" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.83;entryX=1;entryY=0.17;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-21" target="XEi4X-qLvamTxuiHMfgi-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="1440" />
+              <mxPoint x="555" y="1477" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-47" value="Invalid" style="curved=1;startArrow=none;endArrow=block;exitX=0.17;exitY=0;entryX=0.75;entryY=1;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-21" target="XEi4X-qLvamTxuiHMfgi-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="646" y="1231" />
+              <mxPoint x="646" y="1195" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-48" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.9;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-21" target="XEi4X-qLvamTxuiHMfgi-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="799" y="1440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-49" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.31;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-23" target="XEi4X-qLvamTxuiHMfgi-24">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="167" y="1576" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-50" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.67;exitY=1;entryX=0.73;entryY=0.01;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-23" target="XEi4X-qLvamTxuiHMfgi-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="314" y="1576" />
+              <mxPoint x="314" y="1700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-51" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.36;exitY=1;entryX=0.08;entryY=0.01;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-24" target="XEi4X-qLvamTxuiHMfgi-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="103" y="1700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-52" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.72;exitY=1;entryX=0;entryY=0.17;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-23" target="XEi4X-qLvamTxuiHMfgi-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="334" y="1576" />
+              <mxPoint x="334" y="1700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-53" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.64;exitY=1;entryX=0;entryY=0.3;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-24" target="XEi4X-qLvamTxuiHMfgi-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="1700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-54" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-26" target="XEi4X-qLvamTxuiHMfgi-27">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-55" value="Failover" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.47;exitY=1.01;entryX=0.4;entryY=0.01;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-14" target="XEi4X-qLvamTxuiHMfgi-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1470" y="610" />
+              <mxPoint x="1470" y="683" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XEi4X-qLvamTxuiHMfgi-56" value="Restore" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.8;exitY=0.01;entryX=0.85;entryY=1.01;rounded=0;" edge="1" parent="1" source="XEi4X-qLvamTxuiHMfgi-15" target="XEi4X-qLvamTxuiHMfgi-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1550" y="683" />
+              <mxPoint x="1550" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
